@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registration.css">
+    <script src="registration.js"></script>
+    <title>Registration</title>
+</head>
+<body>
+    <form name="form" id="form" action="registration.html" onsubmit="return validateForm()">
+        <h1>
+          Registration Form
+        </h1>
+        <div style="display: flex;">
+          <div style="width: 60%;">
+            <input type="text" name="" placeholder="Enter Name" id="name"><br>
+            <p style="display: none; color: red;" id="empty-name-error">Wrong Input, Enter Name Again.</p>
+            <p style="display: none; color: red;" id="number-name-error">Please Enter Correct Name.</p>
+            <br>
+            <input type="password" name="" placeholder="Enter password" id="password"><br>
+            <p style="display: none; color: red;" id="empty-password-error">Wrong Input, Enter Password Again.</p>
+            <p style="display: none; color: red;" id="short-password-error">Password should be minimum 8 characters long.</p>
+            <br>
+            <input type="password" name="" placeholder="Confirm password" id="confirm_password"><br>
+            <p style="display: none; color: red;" id="empty-Confirm-password-error">Wrong Input, Confirm Password Again.</p>
+            <p style="display: none; color: red;" id="unmatch-password-error">Password not match, Confirm Again.</p>
+            <!-- <p style="display: none" id="short-Confirm-password-error">Password should be minimum 8 characters long.</p> -->
+            <br>
+            <input type="number" name="" placeholder="Enter Age" id="age"><br>
+            <p style="display: none; color: red;" id="age-error">Please Enter Age.</p>
+            <p style="display: none; color: red;" id="wrong-age-error">Please Enter Correct Age.</p>
+            <br>
+            <input type="text" name="" placeholder="Enter Email" id="email"><br>
+            <p style="display: none; color: red;" id="email-error">Please Enter Email.</p>
+            <p style="display: none; color: red;" id="wrong-email-error">Please Enter Correct Email.</p>
+            
+            <p style="font-size: 18px;">Gender:</p>
+            <input type="radio" value="Male" name="gender" id="male">
+            <label for="male">Male</label>
+            <input type="radio" value="Female" name="gender" id="female">
+            <label for="female">Female</label>
+            <input type="radio" value="Other" name="gender" id="other">
+            <label for="other">Other</label>
+            <p style="display: none; color: red;" id="gender-error">Please Select Gender.</p>
+            <br>
+          </div>
+          <div style="width: 50%;">  
+            <p style="font-size: 18px;">Subject:</p>
+            <label for="english"><input type="checkbox" value="English" name="Subject" id="english">English</label>
+            <label for="maths"><input type="checkbox" value="Maths" name="Subject" id="maths">Maths</label>
+            <label for="urdu"><input type="checkbox" value="Urdu" name="Subject" id="urdu">Urdu</label>
+            <p style="display: none; color: red;" id="subject-error">Please Select atleast one subject.</p>
+            <br>
+            <p style="font-size:18px;">City:
+            <select name="City" id="city">
+              <option selected disabled value="Select City">Select City</option>
+              <option value="Lahore">Lahore</option>
+              <option value="Karachi">Karachi</option>
+              <option value="Islamabad">Islamabad</option>
+              <option value="Peshawar">Peshawar</option>
+              <option value="Quetta">Quetta</option>
+              <option value="Faisalabad">Faisalabad</option>
+            </select>
+            <p style="display: none; color: red;" id="city-error">Please Select your city.</p>
+            </p>
+          </p>
+            
+            <textarea name="" id="feedback" placeholder="Please give your valueable Feedback." rows="5" cols="35"></textarea><br>
+            <p style="display: none; color: red;" id="empty-feedback-error">Please provide us with your valueable feedback.</p>
+            <p style="display: none; color: red;" id="short-feedback-error">Please provide more feedback.</p>
+            <br>
+          </div>
+        </div>  
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+      <br>
+</body>
+</html>
